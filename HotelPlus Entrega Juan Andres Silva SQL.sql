@@ -60,19 +60,19 @@ CREATE TABLE servicios_adicionales (
 );
 
 CREATE TABLE reserva_servicio (
-    id_reserva INT,
-    id_servicio INT,
-    cantidad INT,
-    precio_unitario DECIMAL(12,2),
+    id_reserva INT NOT NULL,
+    id_servicio INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(12,2) NOT NULL,
     PRIMARY KEY (id_reserva, id_servicio),
     FOREIGN KEY (id_reserva) REFERENCES reservas(id_reserva),
     FOREIGN KEY (id_servicio) REFERENCES servicios_adicionales(id_servicio)
 );
 
 CREATE TABLE reserva_habitacion (
-    id_reserva INT,
-    id_habitacion INT,
-    precio_unitario DECIMAL(12,2),
+    id_reserva INT NOT NULL,
+    id_habitacion INT NOT NULL,
+    precio_unitario DECIMAL(12,2) NOT NULL,
     observacion VARCHAR(200),
     PRIMARY KEY (id_reserva, id_habitacion),
     FOREIGN KEY (id_reserva) REFERENCES reservas(id_reserva),
