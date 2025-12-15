@@ -11,7 +11,7 @@ DROP FUNCTION IF EXISTS fn_total_pagado_por_reserva;
 DROP VIEW IF EXISTS vw_reservas_detalle;
 
 -- ==============================
--- VISTA: Detalle de reservas
+Detalle de reservas
 -- ==============================
 CREATE VIEW vw_reservas_detalle AS
 SELECT 
