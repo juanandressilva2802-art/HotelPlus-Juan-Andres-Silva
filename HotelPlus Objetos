@@ -1,7 +1,9 @@
 USE HotelPlus;
 
 -- ==============================
--- LIMPIEZA DE OBJETOS (opcional pero recomendado)
+-- Limpieza previa de objetos
+-- Se eliminan vistas, funciones, procedimientos y triggers
+-- para evitar errores al reejecutar el script
 -- ==============================
 DROP TRIGGER IF EXISTS tr_actualizar_estado_reserva;
 DROP PROCEDURE IF EXISTS sp_reservas_por_cliente;
